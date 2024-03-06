@@ -17,6 +17,12 @@ switch (color) {
 		break;
 }
 
+alarm[3] = 2
+
+if (life <= 0) {
+	state = "died"
+}
+
 switch (state) {
 	case "awake":
 		var range = 100
@@ -39,7 +45,11 @@ switch (state) {
 			path_start(path, vel, path_action_stop, false)
 		}
 		break;
+	case "died":
+		//instance_destroy()
+		break;
 }
+
 
 
 //state = enemy_states_idle

@@ -2,6 +2,7 @@ degrees = 30
 maxLength = 200
 image_angle_ = 0
 
+
 colors = [
 	make_color_rgb(255, 255, 255),
 	make_color_rgb(255, 0, 0),
@@ -13,6 +14,8 @@ angle=120;
 distance=500;
 light_surf=noone;
 fan_divisions=20;
+light_damage = 1
+can_damage = true
 
 depth = -8
 
