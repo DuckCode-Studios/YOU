@@ -4,9 +4,11 @@ state = "awake"
 
 path = path_add();
 
+vel = 0
 
 color = "red"
 visible = false
+/*
 switch (color) {
 	case "red":
 		vel = 2;
@@ -20,4 +22,4 @@ switch (color) {
 		vel = 4;
 		sprite_index = spr_white_enemy;
 		break;
-}
+}*/

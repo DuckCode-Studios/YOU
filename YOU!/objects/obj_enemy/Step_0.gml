@@ -1,11 +1,18 @@
 switch (color) {
 	case "red":
+		vel = 2
 		sprite_index = spr_red_enemy_one
 		break;
 	case "blue":
-		sprite_index = spr_blue_enemy_one_seated
+		vel = 1.5
+		if (state = "awake") {
+			sprite_index = spr_blue_enemy_one_seated
+		} else if (state = "chasing") {
+			sprite_index = spr_blue_enemy_one_walk
+		}
 		break;
 	case "white":
+		vel = 3.2
 		sprite_index = spr_white_enemy
 		break;
 }
