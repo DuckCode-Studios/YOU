@@ -6,7 +6,7 @@ cell_h = room_width div cell_size;
 cell_v = room_height div cell_size;
 
 if (!variable_global_exists("level")) {
-	global.level = 200
+	global.level = 0
 }
 	
 controller = 0
@@ -15,8 +15,6 @@ randomize()
 safeZoneRadius = 250
 maxEnemies = 20 + global.level * 2
 enemies = 0
-
-spawn_time = 360
 
 grid = ds_grid_create(cell_h, cell_v);
 
