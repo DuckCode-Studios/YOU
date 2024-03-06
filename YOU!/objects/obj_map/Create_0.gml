@@ -20,6 +20,8 @@ spawn_time = 360
 
 grid = ds_grid_create(cell_h, cell_v);
 
+grid2 = mp_grid_create(0, 0, cell_h, cell_v, cell_size, cell_size)
+
 ds_grid_clear(grid, 0);
 
 if (!variable_global_exists("all_enemies")) {
@@ -145,5 +147,11 @@ for (var _xx = 0; _xx < cell_h;_xx++) {
 if (!instance_exists(obj_key)) {
 	instance_create_layer(keyX, keyY, "Instances", obj_key)
 }
+
+#endregion
+
+#region A*
+
+mp_grid_add_instances(grid2, obj_wall, false)
 
 #endregion
