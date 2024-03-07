@@ -31,7 +31,7 @@ for (var i = 0; i < op_max; i++) {
 					room_goto(1)
 					break;
 				case options[1]:
-					
+					game_end()
 					break;
 				case options[2]:
 					room_goto(2)
