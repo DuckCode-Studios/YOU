@@ -1,13 +1,13 @@
 {
   "$GMRoom":"",
-  "%Name":"Room1",
+  "%Name":"GAME_ROOM",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_33E18A9","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_579527A9","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_33E18A9","path":"rooms/GAME_ROOM/GAME_ROOM.yy",},
+    {"name":"inst_579527A9","path":"rooms/GAME_ROOM/GAME_ROOM.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -39,7 +39,7 @@
     {"$GMRTileLayer":"","%Name":"WallsTiles","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"WallsTiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[-240,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"walls_tiles","path":"tilesets/walls_tiles/walls_tiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"Room1",
+  "name":"GAME_ROOM",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",
