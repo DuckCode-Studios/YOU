@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_player_dash_effect",
+    "path":"sprites/spr_player_dash_effect/spr_player_dash_effect.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

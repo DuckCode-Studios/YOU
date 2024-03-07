@@ -64,6 +64,7 @@
     {"id":{"name":"spr_flashlight","path":"sprites/spr_flashlight/spr_flashlight.yy",},},
     {"id":{"name":"spr_key","path":"sprites/spr_key/spr_key.yy",},},
     {"id":{"name":"spr_player_dash","path":"sprites/spr_player_dash/spr_player_dash.yy",},},
+    {"id":{"name":"spr_player_dash_effect","path":"sprites/spr_player_dash_effect/spr_player_dash_effect.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player_mask","path":"sprites/spr_player_mask/spr_player_mask.yy",},},
     {"id":{"name":"spr_player_walk","path":"sprites/spr_player_walk/spr_player_walk.yy",},},

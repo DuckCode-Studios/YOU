@@ -39,6 +39,7 @@
     {"name":"spr_dash","order":4,"path":"sprites/spr_dash/spr_dash.yy",},
     {"name":"spr_key","order":1,"path":"sprites/spr_key/spr_key.yy",},
     {"name":"spr_player_dash","order":3,"path":"sprites/spr_player_dash/spr_player_dash.yy",},
+    {"name":"spr_player_dash_effect","order":5,"path":"sprites/spr_player_dash_effect/spr_player_dash_effect.yy",},
     {"name":"spr_player_mask","order":1,"path":"sprites/spr_player_mask/spr_player_mask.yy",},
     {"name":"spr_player_walk","order":2,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
     {"name":"spr_tile_walls","order":2,"path":"sprites/spr_tile_walls/spr_tile_walls.yy",},

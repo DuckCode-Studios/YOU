@@ -95,9 +95,6 @@ for (var i = 0; i < ds_list_size(_list); i++) {
 	} else {
 		instance.visible = false
 	}
-	if (can_damage){
-	obj_enemy.life -= light_damage
-	}
 }
 
 ds_list_destroy(_list)

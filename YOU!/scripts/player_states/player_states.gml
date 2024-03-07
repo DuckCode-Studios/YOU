@@ -63,6 +63,12 @@ function player_states_dash() {
 	
 	dash_time++
 	
+	if (velh >= 0) {
+		image_xscale = 1
+	} else {
+		image_xscale = -1
+	}
+	
 	if (place_meeting(x+velh, y, obj_wall)) {
 		while (!place_meeting(x+sign(velh), y, obj_wall)) {
 			x+=sign(velh);
@@ -89,4 +95,5 @@ function player_states_dash() {
 		velv = 0
 		state = player_states_free
 	}
+	instance_create_layer(x, y, "Instances", obj_dash);
 }
