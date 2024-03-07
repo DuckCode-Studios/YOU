@@ -1,6 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function player_states_free(){
+	if (variable_global_exists("pause") && global.pause == true) {
+		sprite_index = spr_player_idle	
+		exit;
+	}
 	#region walk
 
 	var up = keyboard_check(ord("W"));

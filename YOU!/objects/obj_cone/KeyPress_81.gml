@@ -1,5 +1,7 @@
 /// @description Change light color
 
+if (variable_global_exists("pause") && global.pause == true) exit;
+
 if (index == 2) {
 	index = 0
 } else {

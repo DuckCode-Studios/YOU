@@ -1,3 +1,5 @@
+if (variable_global_exists("pause") && global.pause == true) exit;
+
 if (index == 0) {
 	index = 2
 } else {

@@ -23,6 +23,8 @@ if (life <= 0) {
 	state = "died"
 }
 
+
+
 switch (state) {
 	case "awake":
 		var range = 100

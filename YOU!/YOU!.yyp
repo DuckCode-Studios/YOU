@@ -58,6 +58,7 @@
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"GAME_ROOM","path":"rooms/GAME_ROOM/GAME_ROOM.yy",},},
     {"id":{"name":"INFO","path":"rooms/INFO/INFO.yy",},},
     {"id":{"name":"START_MENU","path":"rooms/START_MENU/START_MENU.yy",},},

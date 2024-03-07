@@ -1,3 +1,5 @@
+//if (variable_global_exists("pause") && global.pause == true) exit;
+
 if(!surface_exists(light_surf))
 {
   light_surf=surface_create(room_width,room_height);

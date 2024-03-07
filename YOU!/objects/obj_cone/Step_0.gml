@@ -1,3 +1,5 @@
+if (variable_global_exists("pause") && global.pause == true) exit;
+
 x = obj_flashlight.x
 y = obj_flashlight.y
 
