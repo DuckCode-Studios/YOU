@@ -7,7 +7,7 @@ dash_force = 15
 dash_time = 0
 dash_distance = 10
 can_dash = true
-dash_cooldown = 40
+dash_cooldown = 1
 x_position = 0;
 
 _helditem = instance_create_layer(x, y, "Instances", obj_flashlight);

@@ -7,3 +7,5 @@ for (var i = 0; i < op_max; i++) {
 }
 
 index = 0
+
+global.menu = true

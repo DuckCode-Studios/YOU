@@ -28,6 +28,7 @@ for (var i = 0; i < op_max; i++) {
 		if (mouse_check_button_pressed(mb_left)) {
 			switch (options[i]) {
 				case options[0]:
+					global.menu = false
 					room_goto(1)
 					break;
 				case options[1]:

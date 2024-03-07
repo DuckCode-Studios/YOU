@@ -155,3 +155,4 @@ if (!instance_exists(obj_key)) {
 mp_grid_add_instances(grid2, obj_wall, false)
 
 #endregion
+

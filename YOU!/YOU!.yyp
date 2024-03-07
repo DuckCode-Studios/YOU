@@ -63,6 +63,7 @@
     {"id":{"name":"START_MENU","path":"rooms/START_MENU/START_MENU.yy",},},
     {"id":{"name":"enemy_states","path":"scripts/enemy_states/enemy_states.yy",},},
     {"id":{"name":"player_states","path":"scripts/player_states/player_states.yy",},},
+    {"id":{"name":"spr_alert","path":"sprites/spr_alert/spr_alert.yy",},},
     {"id":{"name":"spr_blue_enemy_one_seated","path":"sprites/spr_blue_enemy_one_seated/spr_blue_enemy_one_seated.yy",},},
     {"id":{"name":"spr_blue_enemy_one_walk","path":"sprites/spr_blue_enemy_one_walk/spr_blue_enemy_one_walk.yy",},},
     {"id":{"name":"spr_dash","path":"sprites/spr_dash/spr_dash.yy",},},
