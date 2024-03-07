@@ -39,6 +39,10 @@ switch (state) {
 		
 		break;
 	case "chasing":
+		if (variable_global_exists("pause") && global.pause == true) {
+			path_position = 0
+			exit;
+		}
 		var x1 = x
 		var y1  = y
 

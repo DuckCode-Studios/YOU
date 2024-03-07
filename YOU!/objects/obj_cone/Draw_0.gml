@@ -85,20 +85,33 @@ surface_set_target(light_surf)
 }
 surface_reset_target();
 
+var enemiesDamaged = ds_list_create()
 for (var i = 0; i < ds_list_size(_list); i++) {
 	var instance = _list[| i]
 	
-	if (instance.color == "red" && index == 1) {
-		instance.visible = true
-	} else if (instance.color == "blue" && index == 2) {
-		instance.visible = true		
-	} else if (instance.color == "white" && index == 0) {
-		instance.visible = true
+	if ( (instance.color == "red" && index == 1) 
+		|| (instance.color == "blue" && index == 2) 
+		|| (instance.color == "white" && index == 0)) {
+	
+	
+		if (ds_list_find_index(enemiesDamaged, instance) == -1) {
+			ds_list_add(enemiesDamaged, instance)
+			
+			with (instance) {
+				visible = true
+				life -= 1
+			}
+		}
+	
 	} else {
+	
 		instance.visible = false
 	}
+
 }
 
+
+ds_list_destroy(enemiesDamaged)
 ds_list_destroy(_list)
 
 gpu_set_blendmode_ext(2,2)

@@ -16,6 +16,9 @@ fan_divisions=20;
 light_damage = 1
 can_damage = true
 
+
+
+
 depth = -10
 
 index = 0
