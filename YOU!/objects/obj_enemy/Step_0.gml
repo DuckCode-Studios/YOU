@@ -1,3 +1,5 @@
+depth = -10
+
 switch (color) {
 	case "red":
 		vel = 2
