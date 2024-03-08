@@ -1,5 +1,6 @@
-//state()
+//state
 
+enemyId = 0
 state = "awake"
 
 path = path_add();
