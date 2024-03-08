@@ -12,8 +12,8 @@
   "duration":12.0,
   "name":"snd_game",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"snd_game",
+    "path":"folders/Sounds/snd_game.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
