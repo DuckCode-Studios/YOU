@@ -1,4 +1,6 @@
-if (variable_global_exists("pause") && global.pause == true) exit;
+if (variable_global_exists("pause") && global.pause == true) visible = false exit;
+
+visible = true
 
 x = obj_player.x;
 y = obj_player.y;
