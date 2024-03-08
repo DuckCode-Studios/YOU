@@ -50,8 +50,17 @@ switch (state) {
 		}
 		break;
 	case "died":
-		var instance = ds_list_find_index(global.all_enemies, self)
-		ds_list_delete(global.all_enemies, instance)
+		var new_list = ds_list_create();
+	    var list_size = ds_list_size(global.all_enemies);
+	    for (var i = 0; i < list_size; i++) {
+	        var enemy = global.all_enemies[| i];
+	        if (enemy.enemyId != self.enemyId) {
+	            ds_list_add(new_list, enemy);
+	        }
+	    }
+    
+	    ds_list_destroy(global.all_enemies);
+	    global.all_enemies = new_list;
 		instance_destroy()
 		break;
 }

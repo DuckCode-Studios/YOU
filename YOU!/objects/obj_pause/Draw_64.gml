@@ -2,6 +2,11 @@ if (variable_global_exists("pause") && global.pause == true) {
 	
 	draw_set_font(ft_menu)
 
+	draw_set_alpha(0.8)
+	draw_set_color(c_black)
+	draw_rectangle(0,0, room_width, room_height, false)
+
+
 	var gui_height = display_get_gui_height()
 	var gui_width = display_get_gui_width()
 	var margin = 50
@@ -50,4 +55,6 @@ if (variable_global_exists("pause") && global.pause == true) {
 	draw_set_halign(-1)
 	draw_set_valign(-1)
 	draw_set_font(-1)
+	draw_set_alpha(-1)
+	draw_set_color(-1)
 }

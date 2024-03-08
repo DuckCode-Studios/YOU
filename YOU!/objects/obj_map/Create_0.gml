@@ -124,6 +124,7 @@ for (var _xx = 0; _xx < cell_h;_xx++) {
 				var enemy = instance_create_layer(x1, y1, "Instances", obj_enemy);
 				enemies++
 				
+				enemy.enemyId = enemies
 				ds_list_add(global.all_enemies, enemy)
 				if (enemyType == 0) {
 					//Red
