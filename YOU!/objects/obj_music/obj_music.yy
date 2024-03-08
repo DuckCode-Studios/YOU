@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_map",
+  "%Name":"obj_music",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_map",
+  "name":"obj_music",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"sounds",
+    "path":"folders/Objects/sounds.yy",
   },
   "parentObjectId":null,
   "persistent":false,
