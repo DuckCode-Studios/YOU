@@ -1,6 +1,12 @@
-if (variable_global_exists("pause") && global.pause == true) exit;
+if (global.stats.life <= 0) {
+	instance_destroy()
+}
 
-x = obj_flashlight.x
+if (variable_global_exists("pause") && global.pause == true) exit;
+if (!instance_exists(obj_flashlight)) exit;
+
+
+x = obj_flashlight.x	
 y = obj_flashlight.y
 
 depth = -11

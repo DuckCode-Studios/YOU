@@ -1,3 +1,7 @@
+if (global.stats.life <= 0) {
+	instance_destroy()
+}
+
 if (variable_global_exists("pause") && global.pause == true) {
 	visible = false 
 	exit;

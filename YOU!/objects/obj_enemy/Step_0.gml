@@ -23,6 +23,10 @@ if (life <= 0) {
 	state = "died"
 }
 
+if ((global.stats.life <= 0)) {
+	exit;
+}
+
 switch (state) {
 	case "awake":
 		var range = 250
@@ -47,6 +51,12 @@ switch (state) {
 
 		if (mp_grid_path(obj_map.grid2, path, x1, y1, x2, y2, true)) {
 			path_start(path, vel, path_action_stop, false)
+			if (point_distance(obj_player.x, obj_player.y, self.x, self.y) <= 15
+			&& variable_global_exists("stats") && can_damage == true) {
+				alarm[0] = 10
+				can_damage = false
+				global.stats.life -= damage
+			}
 		}
 		break;
 	case "died":
@@ -64,5 +74,3 @@ switch (state) {
 		instance_destroy()
 		break;
 }
-
-//state = enemy_states_idle

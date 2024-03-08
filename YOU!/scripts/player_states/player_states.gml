@@ -1,10 +1,10 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function player_states_free(){
-	if (variable_global_exists("pause") && global.pause == true) {
-		sprite_index = spr_player_idle	
+	
+	if (global.stats.life <= 0) {
+		state = player_states_dead
 		exit;
 	}
+	
 	#region walk
 
 	var up = keyboard_check(ord("W"));
@@ -16,87 +16,103 @@ function player_states_free(){
 
 	var move_dir = point_direction(0, 0, (right - left), (down - up));
 
-	velh = lengthdir_x(velc * pressed, move_dir);
-	velv = lengthdir_y(velc * pressed, move_dir);
+	global.stats.velh = lengthdir_x(global.stats.velc * pressed, move_dir);
+	global.stats.velv = lengthdir_y(global.stats.velc * pressed, move_dir);
 
-	if (velh != 0 || velv != 0) {
+	if (global.stats.velh != 0 || global.stats.velv != 0) {
 		sprite_index = spr_player_walk;
 	} else {
 		sprite_index = spr_player_idle;
 	}
 
-	if (keyboard_check(vk_shift) && (can_dash)) {
-		velh = 0;
-		velv = 0;
+	if (keyboard_check(vk_shift) && (global.stats.can_dash)) {
+		global.stats.velh = 0;
+		global.stats.velv = 0;
 		
-		alarm[0] = dash_cooldown
+		alarm[0] = global.stats.dash_cooldown
 		
-		can_dash = false
+		global.stats.can_dash = false
 		
-		dash_direction = point_direction(x, y, mouse_x, mouse_y)
+		global.stats.dash_direction = point_direction(x, y, mouse_x, mouse_y)
 	
 		sprite_index = spr_player_dash
 		
 		state = player_states_dash;
 	}
 
-		if (place_meeting(x+velh, y, obj_wall)) {
-		while (!place_meeting(x+sign(velh), y, obj_wall)) {
-			x+=sign(velh);
+		if (place_meeting(x+global.stats.velh, y, obj_wall)) {
+		while (!place_meeting(x+sign(global.stats.velh), y, obj_wall)) {
+			x+=sign(global.stats.velh);
 		}
-		velh = 0;
+		global.stats.velh = 0;
 	}
 
-	x+=velh;
+	x+=global.stats.velh;
 
-	if (place_meeting(x, y+velv, obj_wall)) {
-		while (!place_meeting(x, y+sign(velv), obj_wall)) {
-			y+=sign(velv);
+	if (place_meeting(x, y+global.stats.velv, obj_wall)) {
+		while (!place_meeting(x, y+sign(global.stats.velv), obj_wall)) {
+			y+=sign(global.stats.velv);
 		}
-		velv = 0;
+		global.stats.velv = 0;
 	}
 
-	y+=velv;
+	y+=global.stats.velv;
 
 	#endregion
 }
 
+function player_states_dead() {
+	
+	if (variable_global_exists("stats")) {
+		instance_destroy()
+	}
+}
+	
+	
+
+
 function player_states_dash() {
-	velh = lengthdir_x(dash_force, dash_direction);
-	velv = lengthdir_y(dash_force, dash_direction);
 	
-	dash_time++
+	if (global.stats.life <= 0) {
+		state = player_states_dead
+		exit;
+	}
 	
-	if (velh >= 0) {
+	global.stats.velh = lengthdir_x(global.stats.dash_force, global.stats.dash_direction);
+	global.stats.velv = lengthdir_y(global.stats.dash_force, global.stats.dash_direction);
+	
+	global.stats.dash_time++
+	
+	if (global.stats.velh >= 0) {
 		image_xscale = 1
 	} else {
 		image_xscale = -1
 	}
 	
-	if (place_meeting(x+velh, y, obj_wall)) {
-		while (!place_meeting(x+sign(velh), y, obj_wall)) {
-			x+=sign(velh);
+	if (place_meeting(x+global.stats.velh, y, obj_wall)) {
+		while (!place_meeting(x+sign(global.stats.velh), y, obj_wall)) {
+			x+=sign(global.stats.velh);
 		}
-		dash_time = dash_distance
-		velh = 0;
+		global.stats.dash_time = global.stats.dash_distance
+		global.stats.velh = 0;
 	}
 
-	x+=velh;
+	x+=global.stats.velh;
 
-	if (place_meeting(x, y+velv, obj_wall)) {
-		while (!place_meeting(x, y+sign(velv), obj_wall)) {
-			y+=sign(velv);
+	if (place_meeting(x, y+global.stats.velv, obj_wall)) {
+		while (!place_meeting(x, y+sign(global.stats.velv), obj_wall)) {
+			y+=sign(global.stats.velv);
 		}
-		dash_time = dash_distance
-		velv = 0;
+		global.stats.dash_time = global.stats.dash_distance
+		global.stats.velv = 0;
 	}
 
-	y+=velv;
+	y+=global.stats.velv;
 	
-	if  (dash_time >= dash_distance) {
-		dash_time = 0
-		velh = 0
-		velv = 0
+	if  (global.stats.dash_time >= global.stats.dash_distance) {
+		global.stats.dash_time = 0
+		global.stats.velh = 0
+		global.stats.velv = 0
 		state = player_states_free
 	}
 	instance_create_layer(x, y, "Instances", obj_dash);
