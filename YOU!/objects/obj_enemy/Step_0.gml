@@ -50,7 +50,9 @@ switch (state) {
 		}
 		break;
 	case "died":
-		//instance_destroy()
+		var instance = ds_list_find_index(global.all_enemies, self)
+		ds_list_delete(global.all_enemies, instance)
+		instance_destroy()
 		break;
 }
 
