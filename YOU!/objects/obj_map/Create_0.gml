@@ -77,7 +77,14 @@ for (var _xx = 0; _xx < cell_h;_xx++) {
 			tilemap_set(tile_layer, tile_index, _xx, _yy)
 
 		} else if (grid[# _xx, _yy] == 1) {
-			tilemap_set(tile_layer, 17, _xx, _yy)
+			var _floor = irandom(3)
+			
+			if (_floor == 3) {
+				tilemap_set(tile_layer, 18, _xx, _yy)
+			} else {
+				tilemap_set(tile_layer, 17, _xx, _yy)
+			}
+			
 		}
 	}
 }

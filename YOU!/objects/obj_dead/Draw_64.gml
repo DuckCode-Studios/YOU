@@ -17,7 +17,7 @@ if (!instance_exists(obj_player)) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 
-	draw_text_transformed_color(display_get_gui_width()/2, display_get_gui_height()/2,"YOU DIED", 2, 2, 0,  c_black, c_red, c_red, c_red, 1)
+	draw_text_transformed_color(display_get_gui_width()/2 , display_get_gui_height()/2 - 50,"YOU DIED", 2, 2, 0,  c_black, c_red, c_red, c_red, 1)
 
 	var m_x = device_mouse_x_to_gui(0)
 	var m_y = device_mouse_y_to_gui(0)
