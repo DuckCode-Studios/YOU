@@ -26,10 +26,10 @@ if (!variable_global_exists("all_enemies")) {
 	global.all_enemies = ds_list_create()
 }
 
-north = 1;
-west = 2;
-east = 4;
-south = 8;
+north = 1
+west = 2
+east = 4
+south = 8
 
 var tile_layer = layer_tilemap_get_id("WallsTiles");
 
@@ -70,11 +70,11 @@ for (var _xx = 0; _xx < cell_h;_xx++) {
 			var w = grid[# _xx - 1, _yy] == 0
 			var e = grid[# _xx + 1, _yy] == 0
 			var s = grid[# _xx, _yy + 1] == 0
-			
-			var tile_index = n * north + w * west + e * east + s * south + 1 
-			
+
+			tile_index = n * north + w * west + e * east + s * south  + 1 
+
 			tilemap_set(tile_layer, tile_index, _xx, _yy)
-			
+
 		} else if (grid[# _xx, _yy] == 1) {
 			tilemap_set(tile_layer, 17, _xx, _yy)
 		}

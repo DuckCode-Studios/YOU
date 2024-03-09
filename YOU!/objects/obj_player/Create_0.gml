@@ -20,8 +20,8 @@ if (!variable_global_exists("stats")) {
 		x_position: 0,
 		dash_time: 0,
 		
-		maxLife: 100,
-		life: 100,
+		maxLife: 10000000000000,
+		life: 1000000000000000,
 		light_damage: 1,
 		
 		habilities: ds_list_create()
