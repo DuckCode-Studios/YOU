@@ -7,7 +7,7 @@ path = path_add();
 
 vel = 0
 life = 50
-damage = 5
+damage = 3
 
 can_damage = true
 
