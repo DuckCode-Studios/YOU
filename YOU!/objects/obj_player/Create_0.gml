@@ -5,6 +5,8 @@ flash_light = instance_create_layer(x, y, "Instances", obj_flashlight)
 
 cone = noone
 
+show_debug_message("Player Created")
+
 if (!variable_global_exists("stats")) {
 	global.stats = {
 		level: 1,

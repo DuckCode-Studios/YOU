@@ -6,6 +6,11 @@ if (variable_global_exists("pause") && global.pause == true) {
 
 depth = -7
 
+if (variable_global_exists("stats") && global.stats.life <= 0) {
+	instance_destroy()
+	exit;
+}
+
 state()
 
 if (!instance_exists(obj_cone)) {

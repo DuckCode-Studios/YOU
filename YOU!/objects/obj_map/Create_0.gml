@@ -5,6 +5,7 @@ room_height = room_width div 2;
 cell_h = room_width div cell_size;
 cell_v = room_height div cell_size;
 
+
 if (!variable_global_exists("level")) {
 	global.level = 0
 }
