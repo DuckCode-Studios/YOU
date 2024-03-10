@@ -39,6 +39,8 @@ if (variable_global_exists("pause") && global.pause == true) {
 						break;
 					case options[1]:
 						global.pause = false
+						// ZERA TUDO JADIR
+						audio_stop_sound(snd_game)
 						room_goto(0)
 						global.level = 0
 						break;

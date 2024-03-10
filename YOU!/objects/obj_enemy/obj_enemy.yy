@@ -32,6 +32,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_mask_blue_enemy_one",
+    "path":"sprites/spr_mask_blue_enemy_one/spr_mask_blue_enemy_one.yy",
+  },
   "visible":true,
 }
