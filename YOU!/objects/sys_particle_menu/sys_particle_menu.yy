@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_particle_menu",
+  "%Name":"sys_particle_menu",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_particle_menu",
+  "name":"sys_particle_menu",
   "overriddenProperties":[],
   "parent":{
     "name":"particles",
-    "path":"folders/Objects/particles.yy",
+    "path":"folders/Particle Systems/particles.yy",
   },
   "parentObjectId":null,
   "persistent":false,
