@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":18.624989,
+  "duration":12.0,
   "name":"snd_game_menu",
   "parent":{
     "name":"snd_game_menu",
