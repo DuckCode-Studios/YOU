@@ -39,7 +39,8 @@ switch (state) {
 		
 		break;
 	case "chasing":
-		if (variable_global_exists("pause") && global.pause == true) {
+		if ((variable_global_exists("pause") && global.pause == true) 
+			|| (variable_global_exists("choosing") && global.choosing == true)) {
 			path_position = 0
 			exit;
 		}

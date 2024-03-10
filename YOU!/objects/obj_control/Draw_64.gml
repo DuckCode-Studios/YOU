@@ -7,6 +7,7 @@ var height = healthOutline
 if (variable_global_exists("stats")) {
 	//HUD
 	draw_sprite_ext(spr_health, 0, 100, height, scale, scale, 0, c_white, 1)
+	
 
 	//HealthBar
 	draw_sprite_ext(spr_health_bar, 0, 100, height, (global.stats.life/global.stats.maxLife) * scale, scale, 0, c_white, 1)

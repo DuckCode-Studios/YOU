@@ -2,7 +2,8 @@ if (global.stats.life <= 0) {
 	instance_destroy()
 }
 
-if (variable_global_exists("pause") && global.pause == true) {
+if ((variable_global_exists("pause") && global.pause == true) 
+	|| (variable_global_exists("choosing") && global.choosing == true)) {
 	visible = false 
 	exit;
 } else {

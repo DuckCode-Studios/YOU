@@ -1,4 +1,5 @@
-if (variable_global_exists("pause") && global.pause == true) {
+if ((variable_global_exists("pause") && global.pause == true) 
+	|| (variable_global_exists("choosing") && global.choosing == true)) {
 	sprite_index = spr_player_hidden
 	image_index = 4
 	exit;

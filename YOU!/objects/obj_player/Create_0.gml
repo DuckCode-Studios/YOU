@@ -9,6 +9,7 @@ if (!variable_global_exists("stats")) {
 	global.stats = {
 			level: 1,
 			xpLevel: 0,
+			totalExperience: 0,
 		
 			velh: 0,
 			velv: 0,
@@ -20,9 +21,10 @@ if (!variable_global_exists("stats")) {
 			dash_cooldown: 20,
 			x_position: 0,
 			dash_time: 0,
+			light_range: 30,
 		
-			maxLife: 20,
-			life: 20,
+			maxLife: 1500,
+			life: 1500,
 			light_damage: 1,
 		
 			habilities: ds_list_create()
