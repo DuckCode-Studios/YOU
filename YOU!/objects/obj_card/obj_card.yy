@@ -8,8 +8,8 @@
   "name":"obj_card",
   "overriddenProperties":[],
   "parent":{
-    "name":"menus",
-    "path":"folders/Objects/menus.yy",
+    "name":"skills_selection",
+    "path":"folders/Objects/skills_selection.yy",
   },
   "parentObjectId":null,
   "persistent":false,
