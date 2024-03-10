@@ -43,6 +43,7 @@ if (!instance_exists(obj_player)) {
 			if (mouse_check_button_pressed(mb_left)) {
 				switch (options[i]) {
 					case options[0]:
+						reset_player_data()
 						room_restart()
 						break;
 					case options[1]:

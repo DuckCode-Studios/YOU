@@ -12,10 +12,8 @@ if (variable_global_exists("stats")) {
 	draw_sprite_ext(spr_health_bar, 0, 100, height, (global.stats.life/global.stats.maxLife) * scale, scale, 0, c_white, 1)
 
 	
-	//Player Level
-	draw_text_color(50, height + 50, "Level: " + string(global.stats.level), c_black, c_black, c_green, c_green, 1)
-
-
 	//Room Level
-	draw_text_color(50, height + 70, "Room: " + string(global.level), c_black, c_black, c_green, c_green, 1)
+	draw_text_color(50, height + 50, "Room: " + string(global.level), c_black, c_black, c_green, c_green, 1)
+
+
 }
