@@ -78,6 +78,7 @@
     {"id":{"name":"START_MENU","path":"rooms/START_MENU/START_MENU.yy",},},
     {"id":{"name":"enemy_states","path":"scripts/enemy_states/enemy_states.yy",},},
     {"id":{"name":"player_states","path":"scripts/player_states/player_states.yy",},},
+    {"id":{"name":"player_utils","path":"scripts/player_utils/player_utils.yy",},},
     {"id":{"name":"snd_enemy","path":"sounds/snd_enemy/snd_enemy.yy",},},
     {"id":{"name":"snd_game_menu","path":"sounds/snd_game_menu/snd_game_menu.yy",},},
     {"id":{"name":"snd_game","path":"sounds/snd_game/snd_game.yy",},},
