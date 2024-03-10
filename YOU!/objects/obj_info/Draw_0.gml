@@ -1,0 +1,1 @@
+draw_sprite_ext(spr_logo, 0, room_width / 2, +150, 0.25,0.25,0,c_white,1)
