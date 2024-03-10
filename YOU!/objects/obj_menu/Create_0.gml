@@ -1,4 +1,4 @@
-options = ["NEW GAME", "EXIT", "COLLABORATORS"]
+options = ["NEW GAME", "COLLABORATORS", "EXIT"]
 op_max = array_length(options)
 scale[array_length(options) - 1] = 0
 

@@ -33,10 +33,10 @@ for (var i = 0; i < op_max; i++) {
 					audio_play_sound(snd_game, 10, true)
 					room_goto(1)
 					break;
-				case options[1]:
+				case options[2]:
 					game_end()
 					break;
-				case options[2]:
+				case options[1]:
 					room_goto(2)
 					break;
 			}
