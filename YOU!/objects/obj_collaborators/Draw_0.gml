@@ -4,7 +4,7 @@ draw_set_font(ft_menu)
 draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 
-var _text = "The first game developed by DunkCode Studios"
+var _text = "The first game developed by DuckCode Studios"
 var _text2 = "formed by Henrique Jose de Souza and Jadir Pires de Borba Junior."
 var _text3 = "Thank you for playing our game!"
 
