@@ -1,5 +1,7 @@
 depth = -10
 
+alpha = lerp(alpha, 0, 0.25)
+
 switch (color) {
 	case "red":
 		vel = 2

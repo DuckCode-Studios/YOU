@@ -101,6 +101,7 @@ for (var i = 0; i < ds_list_size(_list); i++) {
 			with (instance) {
 				visible = true
 				if (variable_global_exists("stats")) {
+					alpha = 0.25
 					life -= global.stats.light_damage
 				}
 			}
