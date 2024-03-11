@@ -1,4 +1,5 @@
 //state
+alpha = 0
 
 enemyId = 0
 state = "awake"

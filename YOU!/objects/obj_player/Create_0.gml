@@ -25,6 +25,7 @@ if (!variable_global_exists("stats")) {
 			maxLife: 100,
 			life: 100,
 			light_damage: 1,
+			life_steal: 0
 	}
 
 }

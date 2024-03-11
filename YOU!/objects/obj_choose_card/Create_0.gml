@@ -8,9 +8,6 @@ for (var i = 0; i < op_max; i++) {
 	scale[i] = 1
 }
 
-
-
-
 index = 0
 
 cards = ds_map_create()

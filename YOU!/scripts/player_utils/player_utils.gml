@@ -20,6 +20,7 @@ function reset_player_data() {
 			maxLife: 100,
 			life: 100,
 			light_damage: 1,
+			life_steal: 0
 		}
 	}
 	
@@ -29,6 +30,20 @@ function reset_player_data() {
 	}
 }
 
+
+function change_life(value) {
+
+
+	var candidate = global.stats.life + value
+	
+	if (candidate < 0) {
+		global.stats.life = 0
+	} else if (candidade > global.stats.maxLife) {
+		global.stats.life = global.stats.maxLife
+	}
+	
+	
+}
 
 function load_all_skills() {
 
@@ -100,6 +115,20 @@ function load_all_skills() {
 		valueSkill: 5, //Value of add or reduce
 		minValue: -1,
 		maxValue: 50,
+		spriteImage: spr_flashlight_range
+	}
+	
+	var life_steal_upgrade = {
+		skillId: 6,
+		name: "Upgrade Life Steal",
+		description: "Upgrade Life Steal by 1%",
+		values: 1,
+		attributes: ["life_steal"],
+		task: "add", //reduce, add
+		typeSkill: "percentual", //flat, percentual
+		valueSkill: 5, //Value of add or reduce
+		minValue: -1,
+		maxValue: 10,
 		spriteImage: spr_flashlight_range
 	}
 	

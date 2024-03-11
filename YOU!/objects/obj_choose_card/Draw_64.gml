@@ -83,18 +83,18 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 			ds_list_add(sortedNumbers, idCard)
 			
 			
-			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25 * scale[i], 0.25* scale[i], 0, c_white, 1)
+			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86*scale[i], scale[i], scale[i], 0, c_white, 1)
 			
-			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80, skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
+			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80*scale[i], skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
 			
 		} else {
 			
 			var skill = ds_map_find_value(cards, i)
 			
-			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25* scale[i], 0.25* scale[i], 0, c_white, 1)
+			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86*scale[i], scale[i], scale[i], 0, c_white, 1)
 			
 			draw_set_color(c_black)
-			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80, skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
+			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80*scale[i], skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
 			
 		}
 		
