@@ -1,3 +1,4 @@
+
 if (variable_global_exists("choosing") && global.choosing == true) {
 	
 	draw_set_font(ft_menu)
@@ -11,7 +12,7 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 	
 	var gap = 350
 	var origin = 290
-
+	
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_center)
 	
@@ -20,6 +21,7 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 
 
 	for (var i = 0; i < 3; i++) {
+		
 		draw_set_color(c_white)
 		
 		var cardHeight = 400
@@ -50,8 +52,9 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 			scale[i] = lerp(scale[i], 1, 0.15)
 			draw_set_color(c_white)
 		}
-		
 		draw_sprite_ext(spr_card_template, 0, origin + i*gap, gui_height / 2, scale[i], scale[i], 0, c_white, 1)
+		
+		
 	}
 	
 	draw_set_alpha(-1)
