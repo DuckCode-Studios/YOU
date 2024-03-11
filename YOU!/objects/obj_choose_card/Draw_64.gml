@@ -33,7 +33,7 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 
 		if (point_in_rectangle(m_x, m_y, x1, y1, x2, y2)) {
 			scale[i] = lerp(scale[i], 1.25, 0.15)
-			
+
 			if (mouse_check_button_pressed(mb_left)) {
 				switch (options[i]) {
 					case options[0]:
@@ -64,18 +64,18 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 			ds_map_add(cards, i, skill)
 			
 			
-			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25 * scale[i], 0.25* scale[i], 0, c_white, 1)
+			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86 * scale[i], scale[i], scale[i], 0, c_white, 1)
 			
-			draw_text_transformed_color(origin + i*gap, gui_height/2 + 10, skill.description, 1, 1, 0, c_white, c_white,c_white,c_white,  1)
+			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80  * scale[i], skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
 			
 		} else {
 			
 			var skill = ds_map_find_value(cards, i)
 			
-			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25* scale[i], 0.25* scale[i], 0, c_white, 1)
+			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86 * scale[i], scale[i], scale[i], 0, c_white, 1)
 			
 			draw_set_color(c_black)
-			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80, skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
+			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80 * scale[i], skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
 			
 		}
 		
