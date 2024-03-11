@@ -20,7 +20,7 @@ function reset_player_data() {
 			maxLife: 100,
 			life: 100,
 			light_damage: 1,
-			life_steal: 10
+			life_steal: 1
 		}
 	}
 	
@@ -39,6 +39,8 @@ function change_life(value) {
 		global.stats.life = 0
 	} else if (candidate > global.stats.maxLife) {
 		global.stats.life = global.stats.maxLife
+	} else {
+		global.stats.life += value
 	}
 	
 	
