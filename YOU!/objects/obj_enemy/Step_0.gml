@@ -23,6 +23,11 @@ switch (color) {
 
 if (life <= 0) {
 	state = "died"
+	
+	if (variable_global_exists("stats")) {
+		global.stats.total_experience += experience
+	}
+	
 }
 
 if ((global.stats.life <= 0)) {

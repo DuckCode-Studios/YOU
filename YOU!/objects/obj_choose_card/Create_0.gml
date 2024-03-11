@@ -12,3 +12,5 @@ index = 0
 
 cards = ds_map_create()
 
+sortedNumbers = ds_list_create()
+

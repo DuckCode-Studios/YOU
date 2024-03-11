@@ -2,9 +2,8 @@
 function reset_player_data() {
 	if (variable_global_exists("stats")) {
 		global.stats = {
-			level: 1,
-			xpLevel: 0,
-			totalExperience: 0,
+			level: 0,
+			total_experience: 0,
 
 			velh: 0,
 			velv: 0,
@@ -18,11 +17,10 @@ function reset_player_data() {
 			dash_time: 0,
 			light_range: 30,
 		
-			maxLife: 1500,
-			life: 1500,
+			maxLife: 100,
+			life: 100,
 			light_damage: 1,
-		
-			habilities: ds_list_create()
+			life_steal: 0
 		}
 	}
 	
@@ -32,6 +30,20 @@ function reset_player_data() {
 	}
 }
 
+
+function change_life(value) {
+
+
+	var candidate = global.stats.life + value
+	
+	if (candidate < 0) {
+		global.stats.life = 0
+	} else if (candidade > global.stats.maxLife) {
+		global.stats.life = global.stats.maxLife
+	}
+	
+	
+}
 
 function load_all_skills() {
 
@@ -95,7 +107,7 @@ function load_all_skills() {
 	var light_range_upgrade = {
 		skillId: 5,
 		name: "Upgrade Light Range",
-		description: "Upgrade Walk Speed by 5%",
+		description: "Upgrade Light Range by 5%",
 		values: 1,
 		attributes: ["light_range"],
 		task: "add", //reduce, add
@@ -103,6 +115,20 @@ function load_all_skills() {
 		valueSkill: 5, //Value of add or reduce
 		minValue: -1,
 		maxValue: 50,
+		spriteImage: spr_flashlight_range
+	}
+	
+	var life_steal_upgrade = {
+		skillId: 6,
+		name: "Upgrade Life Steal",
+		description: "Upgrade Life Steal by 1%",
+		values: 1,
+		attributes: ["life_steal"],
+		task: "add", //reduce, add
+		typeSkill: "percentual", //flat, percentual
+		valueSkill: 5, //Value of add or reduce
+		minValue: -1,
+		maxValue: 10,
 		spriteImage: spr_flashlight_range
 	}
 	
@@ -121,8 +147,8 @@ function load_all_skills() {
 	
 	
 	var expCurve = []
-	
-	for (var i = 0; i < 30; i++) {
+	global.max_level = 30
+	for (var i = 0; i < global.max_level; i++) {
 		if (i == 0) {
 			expCurve[i] = 100
 		} else {
@@ -131,8 +157,6 @@ function load_all_skills() {
 	}
 	
 	global.expCurves = expCurve
-	
-	show_debug_message(global.expCurves)
 	
 	
 }
@@ -143,8 +167,6 @@ function give_skill(skillId) {
 		
 		var skill = ds_map_find_value(global.all_skills, skillId)
 		
-		show_debug_message("Giving the skill:")
-		show_debug_log(skill)
 		var value = 0
 		if (skill.task == "reduce") {
 			//Reduce
@@ -175,9 +197,6 @@ function give_skill(skillId) {
 			}
 			
 		}
-		
-		show_debug_message("New PlayerData:")
-		show_debug_message(global.stats)
 		
 	}
 	

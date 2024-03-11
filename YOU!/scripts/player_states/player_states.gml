@@ -5,6 +5,18 @@ function player_states_free(){
 		exit;
 	}
 	
+	
+	if (variable_global_exists("expCurves") && global.expCurves[global.stats.level] <= global.stats.total_experience) {
+		//Player passou de nível!!!!
+		if (global.stats.level <= global.max_level) {
+			global.stats.total_experience -= global.expCurves[global.stats.level]
+			global.stats.level += 1
+			global.choosing = true
+			exit;
+		}
+
+	}
+	
 	#region walk
 
 	var up = keyboard_check(ord("W"));

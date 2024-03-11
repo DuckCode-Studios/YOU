@@ -105,6 +105,10 @@ for (var i = 0; i < ds_list_size(_list); i++) {
 					life -= global.stats.light_damage
 				}
 			}
+			
+			if (global.stats.life_steal != 0) {
+				change_life(global.stats.light_damage * (global.stats.life_steal/100))
+			}
 		}
 	
 	} else {
