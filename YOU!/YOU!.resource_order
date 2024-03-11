@@ -50,6 +50,7 @@
     {"name":"obj_flashlight","order":1,"path":"objects/obj_flashlight/obj_flashlight.yy",},
     {"name":"obj_key","order":7,"path":"objects/obj_key/obj_key.yy",},
     {"name":"obj_map","order":5,"path":"objects/obj_map/obj_map.yy",},
+    {"name":"obj_particle_game","order":1,"path":"objects/obj_particle_game/obj_particle_game.yy",},
     {"name":"obj_pause","order":11,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"obj_wall","order":3,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"INFO","order":2,"path":"rooms/INFO/INFO.yy",},
@@ -57,6 +58,7 @@
     {"name":"player_utils","order":1,"path":"scripts/player_utils/player_utils.yy",},
     {"name":"spr_alert","order":6,"path":"sprites/spr_alert/spr_alert.yy",},
     {"name":"spr_blue_enemy_one_walk","order":1,"path":"sprites/spr_blue_enemy_one_walk/spr_blue_enemy_one_walk.yy",},
+    {"name":"spr_damage_boost","order":4,"path":"sprites/spr_damage_boost/spr_damage_boost.yy",},
     {"name":"spr_dash","order":4,"path":"sprites/spr_dash/spr_dash.yy",},
     {"name":"spr_flashlight_range","order":1,"path":"sprites/spr_flashlight_range/spr_flashlight_range.yy",},
     {"name":"spr_health_bar","order":9,"path":"sprites/spr_health_bar/spr_health_bar.yy",},
@@ -73,6 +75,5 @@
     {"name":"spr_shadow","order":7,"path":"sprites/spr_shadow/spr_shadow.yy",},
     {"name":"spr_tile_walls","order":2,"path":"sprites/spr_tile_walls/spr_tile_walls.yy",},
     {"name":"spr_wall","order":3,"path":"sprites/spr_wall/spr_wall.yy",},
-    {"name":"spr_damage_boost","order":4,"path":"sprites/spr_damage_boost/spr_damage_boost.yy",},
   ],
 }

@@ -30,7 +30,6 @@ for (var i = 0; i < op_max; i++) {
 				case options[0]:
 					global.menu = false
 					audio_stop_sound(snd_game_menu)
-					audio_play_sound(snd_game, 10, true)
 					room_goto(1)
 					break;
 				case options[2]:

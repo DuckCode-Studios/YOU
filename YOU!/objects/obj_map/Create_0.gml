@@ -1,3 +1,5 @@
+audio_play_sound(snd_game, 10, true)
+
 cell_size = 64;
 room_width = cell_size * 40;
 room_height = room_width div 2;

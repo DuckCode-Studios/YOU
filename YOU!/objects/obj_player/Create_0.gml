@@ -18,7 +18,7 @@ if (!variable_global_exists("stats")) {
 			dash_force: 15,
 			dash_distance: 10,
 			can_dash: true,
-			dash_cooldown: 50,
+			dash_cooldown: 1,
 			x_position: 0,
 			dash_time: 0,
 			light_range: 30,
