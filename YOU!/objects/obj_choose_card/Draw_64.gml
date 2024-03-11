@@ -71,10 +71,10 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 		if (ds_map_size(cards) < 3 && variable_global_exists("all_skills")) {
 			
 			randomize()
-			var idCard = irandom(4) + 1
+			var idCard = irandom(ds_map_size(global.all_skills) - 1) + 1
 			
 			while (ds_list_find_index(sortedNumbers ,idCard) != -1) {
-				idCard = irandom(4) + 1
+				idCard = irandom(ds_map_size(global.all_skills) - 1) + 1
 			}
 			
 			var skill = ds_map_find_value(global.all_skills, idCard)
