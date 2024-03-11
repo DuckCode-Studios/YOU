@@ -34,6 +34,7 @@ for (var i = 0; i < op_max; i++) {
 					room_goto(1)
 					break;
 				case options[2]:
+					audio_stop_sound(snd_game_menu)
 					game_end()
 					break;
 				case options[1]:
