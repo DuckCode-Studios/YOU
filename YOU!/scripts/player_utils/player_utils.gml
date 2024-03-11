@@ -46,7 +46,8 @@ function load_all_skills() {
 		typeSkill: "percentual", //flat, percentual
 		valueSkill: 10, //Value of add or reduce
 		minValue: 10,
-		maxValue: -1
+		maxValue: -1,
+		spriteImage: spr_dash_reduction
 	}
 	
 	var life_upgrade = {
@@ -59,7 +60,8 @@ function load_all_skills() {
 		typeSkill: "percentual", //flat, percentual
 		valueSkill: 10, //Value of add or reduce
 		minValue: -1,
-		maxValue: -1
+		maxValue: -1,
+		spriteImage: spr_life_boost
 	}
 	
 	var damage_upgrade = {
@@ -72,7 +74,8 @@ function load_all_skills() {
 		typeSkill: "percentual", //flat, percentual
 		valueSkill: 10, //Value of add or reduce
 		minValue: -1,
-		maxValue: -1
+		maxValue: -1,
+		spriteImage: spr_damage_boost
 	}
 	
 	var speed_upgrade = {
@@ -85,7 +88,8 @@ function load_all_skills() {
 		typeSkill: "percentual", //flat, percentual
 		valueSkill: 10, //Value of add or reduce
 		minValue: -1,
-		maxValue: 8
+		maxValue: 8,
+		spriteImage: spr_move_speed
 	}
 	
 	var light_range_upgrade = {
@@ -98,7 +102,8 @@ function load_all_skills() {
 		typeSkill: "percentual", //flat, percentual
 		valueSkill: 5, //Value of add or reduce
 		minValue: -1,
-		maxValue: 50
+		maxValue: 50,
+		spriteImage: spr_flashlight_range
 	}
 	
 	

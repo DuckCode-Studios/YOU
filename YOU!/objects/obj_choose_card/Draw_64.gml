@@ -52,6 +52,27 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 		}
 		
 		draw_sprite_ext(spr_card_template, 0, origin + i*gap, gui_height / 2, scale[i], scale[i], 0, c_white, 1)
+		
+		if (ds_map_size(cards) < 3 && variable_global_exists("all_skills")) {
+			
+			randomize()
+			var idCard = irandom(4) + 1
+			
+			var skill = ds_map_find_value(global.all_skills, idCard)
+			
+			show_debug_message(skill)
+			ds_map_add(cards, i, skill)
+			
+			
+			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25 * scale[i], 0.25* scale[i], 0, c_white, 1)
+			
+		} else {
+			
+			var skill = ds_map_find_value(cards, i)
+			
+			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25* scale[i], 0.25* scale[i], 0, c_white, 1)
+		}
+		
 	}
 	
 	draw_set_alpha(-1)
@@ -61,9 +82,5 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 	draw_set_font(-1)
 	
 } else {
-	
-	for (var i = 0; i < ds_list_size(cards);i++) {
-		instance_destroy(cards[| i])
-	}
-	ds_list_clear(cards)
-}
+	ds_map_clear(cards)
+} 
