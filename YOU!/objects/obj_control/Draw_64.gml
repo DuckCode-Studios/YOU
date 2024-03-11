@@ -17,4 +17,7 @@ if (variable_global_exists("stats")) {
 	draw_text_color(50, height + 50, "Room: " + string(global.level), c_black, c_black, c_green, c_green, 1)
 
 
+	//Player Level
+	draw_text_color(50, height + 80, "Level: " + string(global.stats.level), c_black, c_black, c_green, c_green, 1)
+
 }

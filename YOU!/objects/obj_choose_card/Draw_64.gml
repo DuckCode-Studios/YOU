@@ -34,18 +34,33 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 		if (point_in_rectangle(m_x, m_y, x1, y1, x2, y2)) {
 			scale[i] = lerp(scale[i], 1.25, 0.15)
 			
-			if (mouse_check_button_pressed(mb_left)) {
-				switch (options[i]) {
-					case options[0]:
-						break;
-					case options[1]:
-						
-						break;
-					case options[2]:
-						
-						break;
+			if (ds_map_size(cards) > 0) {
+				var selectedSkill = noone
+				if (mouse_check_button_pressed(mb_left)) {
+					switch (options[i]) {
+						case options[0]:
+							selectedSkill = ds_map_find_value(cards, options[0])
+							
+							give_skill(selectedSkill.skillId)
+							global.choosing = false
+							break;
+						case options[1]:
+							selectedSkill = ds_map_find_value(cards, options[1])
+							
+							give_skill(selectedSkill.skillId)
+							global.choosing = false
+							break;
+						case options[2]:
+							selectedSkill = ds_map_find_value(cards, options[2])
+							
+							give_skill(selectedSkill.skillId)
+							global.choosing = false
+							break;
+					}
 				}
 			}
+			
+			
 		} else {
 			scale[i] = lerp(scale[i], 1, 0.15)
 			draw_set_color(c_white)
@@ -58,15 +73,19 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 			randomize()
 			var idCard = irandom(4) + 1
 			
+			while (ds_list_find_index(sortedNumbers ,idCard) != -1) {
+				idCard = irandom(4) + 1
+			}
+			
 			var skill = ds_map_find_value(global.all_skills, idCard)
 			
-			show_debug_message(skill)
 			ds_map_add(cards, i, skill)
+			ds_list_add(sortedNumbers, idCard)
 			
 			
 			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25 * scale[i], 0.25* scale[i], 0, c_white, 1)
 			
-			draw_text_transformed_color(origin + i*gap, gui_height/2 + 10, skill.description, 1, 1, 0, c_white, c_white,c_white,c_white,  1)
+			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80, skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
 			
 		} else {
 			
@@ -89,4 +108,5 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 	
 } else {
 	ds_map_clear(cards)
+	ds_list_clear(sortedNumbers)
 } 
