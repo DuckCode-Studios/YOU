@@ -51,7 +51,7 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 			draw_set_color(c_white)
 		}
 		
-		draw_sprite_ext(spr_card_template, 0, origin + i*gap, gui_height / 2, scale[i], scale[i], 0, c_white, 1)
+		draw_sprite_ext(spr_card_template_silver, 0, origin + i*gap, gui_height / 2, scale[i], scale[i], 0, c_white, 1)
 		
 		if (ds_map_size(cards) < 3 && variable_global_exists("all_skills")) {
 			
@@ -66,11 +66,17 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 			
 			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25 * scale[i], 0.25* scale[i], 0, c_white, 1)
 			
+			draw_text_transformed_color(origin + i*gap, gui_height/2 + 10, skill.description, 1, 1, 0, c_white, c_white,c_white,c_white,  1)
+			
 		} else {
 			
 			var skill = ds_map_find_value(cards, i)
 			
 			draw_sprite_ext(skill.spriteImage, 0, origin + i*gap, gui_height / 2 - 86, 0.25* scale[i], 0.25* scale[i], 0, c_white, 1)
+			
+			draw_set_color(c_black)
+			draw_text_ext_transformed(origin + i*gap, gui_height/2 + 80, skill.description, string_height(skill.description), 300, 0.6 * scale[i], 0.6 * scale[i], 0)
+			
 		}
 		
 	}
