@@ -20,7 +20,7 @@ function reset_player_data() {
 			maxLife: 100,
 			life: 100,
 			light_damage: 1,
-			life_steal: 0
+			life_steal: 10
 		}
 	}
 	
@@ -32,13 +32,12 @@ function reset_player_data() {
 
 
 function change_life(value) {
-
-
+	
 	var candidate = global.stats.life + value
 	
 	if (candidate < 0) {
 		global.stats.life = 0
-	} else if (candidade > global.stats.maxLife) {
+	} else if (candidate > global.stats.maxLife) {
 		global.stats.life = global.stats.maxLife
 	}
 	
@@ -128,8 +127,8 @@ function load_all_skills() {
 		typeSkill: "percentual", //flat, percentual
 		valueSkill: 5, //Value of add or reduce
 		minValue: -1,
-		maxValue: 10,
-		spriteImage: spr_flashlight_range
+		maxValue: 30,
+		spriteImage: spr_life_steal
 	}
 	
 	
@@ -142,6 +141,7 @@ function load_all_skills() {
 	ds_map_add(global.all_skills, damage_upgrade.skillId, damage_upgrade)
 	ds_map_add(global.all_skills, speed_upgrade.skillId, speed_upgrade)
 	ds_map_add(global.all_skills, light_range_upgrade.skillId, light_range_upgrade)
+	ds_map_add(global.all_skills, life_steal_upgrade.skillId, life_steal_upgrade)
 	
 	
 	
