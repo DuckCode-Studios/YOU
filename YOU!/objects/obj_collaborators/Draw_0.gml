@@ -5,7 +5,7 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 
 var _text = "The first game developed by DuckCode Studios"
-var _text2 = "formed by Henrique Jose de Souza and Jadir Pires de Borba Junior."
+var _text2 = "formed by Jadir Pires de Borba Junior."
 var _text3 = "Thank you for playing our game!"
 
 draw_text_transformed_color(room_width /2, (room_height / 2) - 50, _text, 1, 1, 0, c_white, c_white,c_white,c_white,  1)
