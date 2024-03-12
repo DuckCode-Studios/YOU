@@ -135,17 +135,37 @@ for (var _xx = 0; _xx < cell_h;_xx++) {
 				enemies++
 				
 				enemy.enemyId = enemies
-				ds_list_add(global.all_enemies, enemy)
+				var vel = 0
+				var life = 0
+				var damage = 0
+				var experience = 15 + global.level
 				if (enemyType == 0) {
 					//Red
 					enemy.color = "red"
+					vel = 2.5 + global.level*0.01
+					life = 50 + global.level*2
+					damage = 5 + global.level*0.5
+					
 				} else if (enemyType == 1) {
 					//Blue
 					enemy.color = "blue"
+					vel = 1.8 + global.level*0.01
+					life = 150 + global.level*2
+					damage = 10 + global.level*0.5
+					
 				} else {
 					//White
 					enemy.color = "white"
+					vel = 3.5 + global.level*0.01
+					life = 30 + global.level*2
+					damage = 3 + global.level*0.5
 				}
+				enemy.vel = vel
+				enemy.life = life
+				enemy.damage = damage
+				show_debug_message(enemy)
+				ds_list_add(global.all_enemies, enemy)
+				
             }
 			_enemySpawnChance = random(0.5) + 0.5
 			controller++
