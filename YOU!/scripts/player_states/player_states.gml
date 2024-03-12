@@ -32,6 +32,7 @@ function player_states_free(){
 	global.stats.velv = lengthdir_y(global.stats.velc * pressed, move_dir);
 
 	if (global.stats.velh != 0 || global.stats.velv != 0) {
+		audio_play_sound(snd_walk, 50, false, 0.05)
 		sprite_index = spr_player_walk;
 	} else {
 		sprite_index = spr_player_idle;
@@ -89,6 +90,8 @@ function player_states_dash() {
 		state = player_states_dead
 		exit;
 	}
+	
+	audio_play_sound(snd_dash, 15, false, 0.2)
 	
 	global.stats.velh = lengthdir_x(global.stats.dash_force, global.stats.dash_direction);
 	global.stats.velv = lengthdir_y(global.stats.dash_force, global.stats.dash_direction);

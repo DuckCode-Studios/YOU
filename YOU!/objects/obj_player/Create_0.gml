@@ -1,3 +1,5 @@
+window_set_cursor(cr_none)
+
 
 state = player_states_free;
 

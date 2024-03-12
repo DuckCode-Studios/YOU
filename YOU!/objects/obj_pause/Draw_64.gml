@@ -40,7 +40,11 @@ if (variable_global_exists("pause") && global.pause == true) {
 					case options[1]:
 						global.pause = false
 						// ZERA TUDO JADIR
+						window_set_cursor(cr_arrow)
+						game_restart()
 						audio_stop_sound(snd_game)
+						instance_destroy(obj_player)
+						instance_destroy(obj_pause)
 						room_goto(0)
 						global.level = 0
 						break;
@@ -57,6 +61,5 @@ if (variable_global_exists("pause") && global.pause == true) {
 	draw_set_halign(-1)
 	draw_set_valign(-1)
 	draw_set_font(-1)
-	draw_set_alpha(-1)
 	draw_set_color(-1)
 }
