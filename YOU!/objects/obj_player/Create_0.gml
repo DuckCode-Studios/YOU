@@ -7,6 +7,10 @@ flash_light = instance_create_layer(x, y, "Instances", obj_flashlight)
 
 cone = noone
 
+can_snd_walk = true
+max_time = 30
+time_now = 0
+
 if (!variable_global_exists("stats")) {
 	global.stats = {
 			level: 0,
