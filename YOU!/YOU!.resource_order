@@ -69,6 +69,7 @@
     {"name":"spr_health","order":8,"path":"sprites/spr_health/spr_health.yy",},
     {"name":"spr_key","order":1,"path":"sprites/spr_key/spr_key.yy",},
     {"name":"spr_life_boost","order":3,"path":"sprites/spr_life_boost/spr_life_boost.yy",},
+    {"name":"spr_life_steal","order":5,"path":"sprites/spr_life_steal/spr_life_steal.yy",},
     {"name":"spr_move_speed","order":2,"path":"sprites/spr_move_speed/spr_move_speed.yy",},
     {"name":"spr_player_dash_effect","order":5,"path":"sprites/spr_player_dash_effect/spr_player_dash_effect.yy",},
     {"name":"spr_player_dash","order":3,"path":"sprites/spr_player_dash/spr_player_dash.yy",},
@@ -79,6 +80,6 @@
     {"name":"spr_shadow","order":7,"path":"sprites/spr_shadow/spr_shadow.yy",},
     {"name":"spr_tile_walls","order":2,"path":"sprites/spr_tile_walls/spr_tile_walls.yy",},
     {"name":"spr_wall","order":3,"path":"sprites/spr_wall/spr_wall.yy",},
-    {"name":"spr_life_steal","order":5,"path":"sprites/spr_life_steal/spr_life_steal.yy",},
+    {"name":"spr_red_enemy_one_walk","order":1,"path":"sprites/spr_red_enemy_one_walk/spr_red_enemy_one_walk.yy",},
   ],
 }

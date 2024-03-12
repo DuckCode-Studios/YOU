@@ -5,7 +5,11 @@ alpha = lerp(alpha, 0, 0.25)
 switch (color) {
 	case "red":
 		vel = 2
-		sprite_index = spr_red_enemy_one
+		if (state = "awake") {
+			sprite_index = spr_red_enemy_one
+		} else if (state = "chasing") {
+			sprite_index = spr_red_enemy_one_walk
+		}
 		break;
 	case "blue":
 		vel = 1.5
