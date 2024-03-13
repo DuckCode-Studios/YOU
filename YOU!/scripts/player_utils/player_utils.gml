@@ -68,7 +68,7 @@ function load_all_skills() {
 		cardId: 3,
 		name: "Silver",
 		spriteImage: spr_card_template_silver,
-		chance: 80
+		chance: 100
 	}
 	
 	global.tiers = ds_map_create()
@@ -254,11 +254,11 @@ function load_all_skills() {
 	for (var i = 1; i <= ds_map_size(global.all_skills); i++) {
 		var skill = ds_map_find_value(global.all_skills, i)
 		if (skill.tier == 1) {
-			ds_list_add(global.silverCards, skill.skillId)
+			ds_list_add(global.diamondCards, skill.skillId)
 		} else if (skill.tier == 2) {
 			ds_list_add(global.goldCards, skill.skillId)
 		} else {
-			ds_list_add(global.diamondCards, skill.skillId)
+			ds_list_add(global.silverCards, skill.skillId)
 		}
 	}
 	
