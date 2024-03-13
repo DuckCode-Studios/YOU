@@ -5,6 +5,14 @@ if ((variable_global_exists("pause") && global.pause == true)
 	exit;
 }
 
+if (state == player_states_dead) {
+	depth = -800
+	
+	sprite_index = spr_player_dead
+	image_index = 10
+	exit
+}
+
 time_now += 1
 
 if (max_time <= time_now) {

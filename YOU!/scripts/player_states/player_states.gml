@@ -76,14 +76,12 @@ function player_states_free(){
 
 function player_states_dead() {
 	
-	if (variable_global_exists("stats")) {
-		instance_destroy()
-	}
+	depth = -50
+	
+	sprite_index = spr_player_dead
+	image_index = 10
 }
 	
-	
-
-
 function player_states_dash() {
 	
 	if (global.stats.life <= 0) {

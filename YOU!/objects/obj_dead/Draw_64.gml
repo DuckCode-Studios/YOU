@@ -52,6 +52,9 @@ if (!instance_exists(obj_player)) {
 				switch (options[i]) {
 					case options[0]:
 						reset_player_data()
+							if (variable_global_exists("stats")) {
+								instance_destroy(obj_player)
+							}
 						room_restart()
 						break;
 					case options[1]:
