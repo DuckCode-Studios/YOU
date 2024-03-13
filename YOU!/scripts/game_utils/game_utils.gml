@@ -38,13 +38,13 @@ function randomize_cards() {
 			
 			if (tier.cardId == 1) {
 				//Silver
-				listCards = global.silverCards
+				listCards = global.diamondCards
 			} else if (tier.cardId == 2) {
 				//Gold
 				listCards = global.goldCards
 			} else {
 				//Diamond
-				listCards = global.diamondCards
+				listCards = global.silverCards
 			}
 			
 			show_debug_message(tier)
