@@ -32,9 +32,9 @@ if (variable_global_exists("pause") && global.pause == true) {
 			scale[i] = lerp(scale[i], 1.4, 0.15)
 			draw_set_color(c_purple)
 
-			if (one_time) {
-				audio_play_sound(snd_mouse_pass, 10, false, 0.2)
-				one_time = false
+			if (!sound_played[i]) {
+	            audio_play_sound(snd_mouse_pass, 10, false, 0.2);
+	            sound_played[i] = 1;
 			}
 
 			if (mouse_check_button_pressed(mb_left)) {
@@ -59,7 +59,7 @@ if (variable_global_exists("pause") && global.pause == true) {
 				}
 			}
 		} else {
-			one_time = true
+			sound_played[i] = 0
 			scale[i] = lerp(scale[i], 1, 0.15)
 			draw_set_color(c_white)
 		}
