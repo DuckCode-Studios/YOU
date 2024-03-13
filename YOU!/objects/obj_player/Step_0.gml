@@ -14,7 +14,6 @@ if (max_time <= time_now) {
 }
 
 if (state == player_states_dash) {
-	
 	audio_play_sound(snd_dash, 15, false, 0.2)
 } else if (state == player_states_free ) {
 	if (sprite_index == spr_player_walk && can_snd_walk) {

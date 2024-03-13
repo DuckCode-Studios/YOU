@@ -1,4 +1,3 @@
-
 function randomize_tier(chance) {
 	//Sorting tier card
 	var tierCard = -1
@@ -6,7 +5,7 @@ function randomize_tier(chance) {
 	for (var j = 1; j <= ds_map_size(global.tiers); j++) {
 		var tier = ds_map_find_value(global.tiers, j);
 		
-		if (tier.chance >= chance) {
+		if (tier.chance >= chance || j ==  ds_map_size(global.tiers)) {
 			tierCard = tier
 			break;
 		}
@@ -14,7 +13,6 @@ function randomize_tier(chance) {
 	
 	return tierCard
 }
-
 
 function randomize_cards() {
 	var cards = ds_map_create()
@@ -31,24 +29,21 @@ function randomize_cards() {
 			
 			var chance = irandom(100)
 			var listCards = ds_list_create()
-			
+
 			//Randomizing the card tier
 			var tier = randomize_tier(chance)
-			
-			
+
 			if (tier.cardId == 1) {
-				//Silver
+				//Diamond
 				listCards = global.diamondCards
 			} else if (tier.cardId == 2) {
 				//Gold
 				listCards = global.goldCards
 			} else {
-				//Diamond
+				//Silver
 				listCards = global.silverCards
 			}
-			
-			show_debug_message(tier)
-			
+
 			var pos = irandom(ds_list_size(listCards) - 1)
 			var idCard = ds_list_find_value(listCards, pos)
 			
@@ -58,21 +53,18 @@ function randomize_cards() {
 				idCard = ds_list_find_value(listCards, pos)
 				
 			}
-			show_debug_message(idCard)
-			show_debug_message(pos)
+			
+			
 			ds_list_add(sortedNumbers, idCard)
 			
 			var skill = ds_map_find_value(global.all_skills, idCard)
 			
 			ds_map_add(cards, skill.skillId, skill)
-			
 		}
-		
 	}
 	
 	var arr = []
 	ds_map_values_to_array(cards, arr)
-	show_debug_message( arr );
 	
 	return arr;
 
