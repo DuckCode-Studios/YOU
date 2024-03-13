@@ -41,13 +41,17 @@ for (var i = 0; i < op_max; i++) {
 					audio_stop_sound(snd_game_menu)
 					room_goto(1)
 					break;
-				case options[2]:
+				case options[3]:
 					audio_stop_sound(snd_game_menu)
 					game_end()
 					break;
 				case options[1]:
 					audio_stop_sound(snd_game_menu)
 					room_goto(2)
+					break;
+				case options[2]:
+					audio_stop_sound(snd_game_menu)
+					room_goto(3)
 					break;
 			}
 		}
