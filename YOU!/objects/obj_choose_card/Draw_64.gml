@@ -1,5 +1,7 @@
 if (variable_global_exists("choosing") && global.choosing == true) {
 	
+	window_set_cursor(cr_handpoint)
+	
 	draw_set_font(ft_menu)
 
 	draw_set_alpha(0.8)
@@ -41,6 +43,8 @@ if (variable_global_exists("choosing") && global.choosing == true) {
 			if (array_length(cards) > 0) {
 				var selectedSkill = noone
 				if (mouse_check_button_pressed(mb_left)) {
+					window_set_cursor(cr_none)
+					
 					switch (options[i]) {
 						case options[0]:
 							//selectedSkill = ds_map_find_value(cards, options[0])

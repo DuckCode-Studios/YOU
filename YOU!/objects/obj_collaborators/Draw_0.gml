@@ -29,14 +29,22 @@ var y1 = (room_height / 2 ) + 150 - str_h / 2
 var x2 = room_width / 2 + str_w / 2
 var y2 = (room_height / 2) + 150+ str_h
 if (point_in_rectangle(m_x, m_y, x1, y1, x2, y2)) {
+	if (one_time) {
+		audio_play_sound(snd_mouse_pass, 10, false, 0.2)
+		one_time = false
+	}
 	draw_set_color(c_purple)
 
 	if (mouse_check_button_pressed(mb_left)) {
-			audio_stop_sound(snd_game_menu)
-			room_goto(0)
+		audio_stop_sound(snd_mouse_pass)
+		audio_play_sound(snd_click, 10, false, 0.2)
+
+		audio_stop_sound(snd_game_menu)
+		room_goto(0)
 	}
 } else {
 	draw_set_color(c_white)
+	one_time = true
 }
 
 draw_text_transformed(room_width /2, (room_height / 2) + 150, menu, 1, 1, 0)
