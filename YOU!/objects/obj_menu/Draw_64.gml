@@ -10,6 +10,8 @@ var m_y = device_mouse_y_to_gui(0)
 draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 
+var sound_played = [0,0,0]
+
 for (var i = 0; i < op_max; i++) {
 
 	var str_h = string_height("I")
@@ -25,7 +27,16 @@ for (var i = 0; i < op_max; i++) {
 		scale[i] = lerp(scale[i], 1.4, 0.15)
 		draw_set_color(c_purple)
 
+
+		if (!sound_played[i]) {
+            audio_play_sound(snd_mouse_pass, 10, false, 0.2);
+            sound_played[i] = 1;
+        }
+		
 		if (mouse_check_button_pressed(mb_left)) {
+			audio_stop_sound(snd_mouse_pass)
+			audio_play_sound(snd_click, 10, false, 0.2)
+			
 			switch (options[i]) {
 				case options[0]:
 					global.menu = false
@@ -45,8 +56,9 @@ for (var i = 0; i < op_max; i++) {
 	} else {
 		scale[i] = lerp(scale[i], 1, 0.15)
 		draw_set_color(c_white)
+		sound_played[i] = 0;
 	}
-
+	
 	draw_text_transformed(gui_width / 2, gui_height / 2 + str_h * i, options[i], scale[i], scale[i], 0)
 }
 

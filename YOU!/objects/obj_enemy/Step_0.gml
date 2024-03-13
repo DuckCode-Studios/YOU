@@ -28,6 +28,8 @@ switch (color) {
 if (life <= 0) {
 	state = "died"
 	
+	audio_play_sound(snd_enemy_die, 10, false, 0.1)
+	
 	if (variable_global_exists("stats")) {
 		global.stats.total_experience += experience
 	}

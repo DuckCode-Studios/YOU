@@ -10,4 +10,6 @@ for (var i = 0; i < op_max; i++) {
 
 index = 0
 
+one_time = true
+
 global.menu = true
