@@ -32,9 +32,6 @@ function randomize_cards() {
 
 			//Randomizing the card tier
 			var tier = randomize_tier(chance)
-			
-			//show_debug_message(tier)
-			show_debug_message(chance)
 
 			if (tier.cardId == 1) {
 				//Diamond
@@ -56,8 +53,8 @@ function randomize_cards() {
 				idCard = ds_list_find_value(listCards, pos)
 				
 			}
-			//show_debug_message(idCard)
-			//show_debug_message(pos)
+			
+			
 			ds_list_add(sortedNumbers, idCard)
 			
 			var skill = ds_map_find_value(global.all_skills, idCard)
@@ -68,7 +65,6 @@ function randomize_cards() {
 	
 	var arr = []
 	ds_map_values_to_array(cards, arr)
-	show_debug_message( arr );
 	
 	return arr;
 

@@ -112,8 +112,23 @@ function load_all_skills() {
 		tier: silver.cardId
 	}
 	
-	var damage_upgrade = {
+	var life_upgrade2 = {
 		skillId: 3,
+		name: "Upgrade max Life",
+		description: "Upgrade Max life by 35%",
+		values: 2,
+		attributes: ["life", "maxLife"],
+		task: "add", //reduce, add
+		typeSkill: "percentual", //flat, percentual
+		valueSkill: 35, //Value of add or reduce
+		minValue: -1,
+		maxValue: -1,
+		spriteImage: spr_life_boost,
+		tier: diamond.cardId
+	}
+	
+	var damage_upgrade = {
+		skillId: 4,
 		name: "Upgrade Light Damage",
 		description: "Upgrade Light Damage by 10%",
 		values: 1,
@@ -128,22 +143,37 @@ function load_all_skills() {
 	}
 	
 	var damage_upgrade2 = {
-		skillId: 4,
+		skillId: 5,
 		name: "Upgrade Light Damage",
-		description: "Upgrade Light Damage by 10%",
+		description: "Upgrade Light Damage by 12%",
 		values: 1,
 		attributes: ["light_damage"],
 		task: "add", //reduce, add
 		typeSkill: "percentual", //flat, percentual
-		valueSkill: 10, //Value of add or reduce
+		valueSkill: 12, //Value of add or reduce
 		minValue: -1,
 		maxValue: -1,
 		spriteImage: spr_damage_boost,
 		tier: gold.cardId
 	}
 	
+	var damage_upgrade3 = {
+		skillId: 6,
+		name: "Upgrade Light Damage",
+		description: "Upgrade Light Damage by 20%",
+		values: 1,
+		attributes: ["light_damage"],
+		task: "add", //reduce, add
+		typeSkill: "percentual", //flat, percentual
+		valueSkill: 20, //Value of add or reduce
+		minValue: -1,
+		maxValue: -1,
+		spriteImage: spr_damage_boost,
+		tier: diamond.cardId
+	}
+	
 	var speed_upgrade = {
-		skillId: 5,
+		skillId: 7,
 		name: "Upgrade Walk Speed",
 		description: "Upgrade Walk Speed by 10%",
 		values: 1,
@@ -158,14 +188,29 @@ function load_all_skills() {
 	}
 	
 	var speed_upgrade2 = {
-		skillId: 6,
+		skillId: 8,
 		name: "Upgrade Walk Speed",
-		description: "Upgrade Walk Speed by 10%",
+		description: "Upgrade Walk Speed by 12%",
 		values: 1,
 		attributes: ["velc"],
 		task: "add", //reduce, add
 		typeSkill: "percentual", //flat, percentual
-		valueSkill: 10, //Value of add or reduce
+		valueSkill: 12, //Value of add or reduce
+		minValue: -1,
+		maxValue: 8,
+		spriteImage: spr_move_speed,
+		tier: gold.cardId
+	}
+	
+	var speed_upgrade3 = {
+		skillId: 9,
+		name: "Upgrade Walk Speed",
+		description: "Upgrade Walk Speed by 20%",
+		values: 1,
+		attributes: ["velc"],
+		task: "add", //reduce, add
+		typeSkill: "percentual", //flat, percentual
+		valueSkill: 20, //Value of add or reduce
 		minValue: -1,
 		maxValue: 8,
 		spriteImage: spr_move_speed,
@@ -173,7 +218,7 @@ function load_all_skills() {
 	}
 	
 	var light_range_upgrade = {
-		skillId: 7,
+		skillId: 10,
 		name: "Upgrade Light Range",
 		description: "Upgrade Light Range by 5%",
 		values: 1,
@@ -184,13 +229,13 @@ function load_all_skills() {
 		minValue: -1,
 		maxValue: 50,
 		spriteImage: spr_flashlight_range,
-		tier: diamond.cardId
+		tier: silver.cardId
 	}
 	
 	var life_steal_upgrade = {
-		skillId: 8,
+		skillId: 11,
 		name: "Upgrade Life Steal",
-		description: "Upgrade Life Steal by 1%",
+		description: "Upgrade Life Steal by 5%",
 		values: 1,
 		attributes: ["life_steal"],
 		task: "add", //reduce, add
@@ -202,30 +247,15 @@ function load_all_skills() {
 		tier: gold.cardId
 	}
 	
-	var life_steal_upgrade1 = {
-		skillId: 9,
-		name: "Upgrade Life Steal",
-		description: "Upgrade Life Steal by 1%",
-		values: 1,
-		attributes: ["life_steal"],
-		task: "add", //reduce, add
-		typeSkill: "percentual", //flat, percentual
-		valueSkill: 5, //Value of add or reduce
-		minValue: -1,
-		maxValue: 30,
-		spriteImage: spr_life_steal,
-		tier: diamond.cardId
-	}
-	
 	var life_steal_upgrade2 = {
-		skillId: 10,
+		skillId: 12,
 		name: "Upgrade Life Steal",
-		description: "Upgrade Life Steal by 1%",
+		description: "Upgrade Life Steal by 10%",
 		values: 1,
 		attributes: ["life_steal"],
 		task: "add", //reduce, add
 		typeSkill: "percentual", //flat, percentual
-		valueSkill: 5, //Value of add or reduce
+		valueSkill: 10, //Value of add or reduce
 		minValue: -1,
 		maxValue: 30,
 		spriteImage: spr_life_steal,
@@ -238,16 +268,22 @@ function load_all_skills() {
 	}
 	
 	ds_map_add(global.all_skills, cooldown_reduction.skillId, cooldown_reduction)
+	
+	
 	ds_map_add(global.all_skills, life_upgrade.skillId, life_upgrade)
+	ds_map_add(global.all_skills, life_upgrade2.skillId, life_upgrade2)
+	
 	ds_map_add(global.all_skills, damage_upgrade.skillId, damage_upgrade)
 	ds_map_add(global.all_skills, damage_upgrade2.skillId, damage_upgrade2)
+	ds_map_add(global.all_skills, damage_upgrade3.skillId, damage_upgrade3)
 	
 	ds_map_add(global.all_skills, speed_upgrade.skillId, speed_upgrade)
 	ds_map_add(global.all_skills, speed_upgrade2.skillId, speed_upgrade2)
+	ds_map_add(global.all_skills, speed_upgrade3.skillId, speed_upgrade3)
+	
 	ds_map_add(global.all_skills, light_range_upgrade.skillId, light_range_upgrade)
 	
 	ds_map_add(global.all_skills, life_steal_upgrade.skillId, life_steal_upgrade)
-	ds_map_add(global.all_skills, life_steal_upgrade1.skillId, life_steal_upgrade1)
 	ds_map_add(global.all_skills, life_steal_upgrade2.skillId, life_steal_upgrade2)
 	
 	
@@ -261,32 +297,6 @@ function load_all_skills() {
 			ds_list_add(global.silverCards, skill.skillId)
 		}
 	}
-	
-	show_debug_message("SHOWING ALL SILVER CARDS")
-	for (var i = 0; i < ds_list_size(global.silverCards);i++ ) {
-		show_debug_message(global.silverCards[| i])
-	}
-	/*for (var k = ds_map_find_first(global.silverCards); !is_undefined(k); k = ds_map_find_next(global.silverCards, k)) {
-		show_debug_message(global.silverCards[? k]);
-	}*/
-	
-	show_debug_message("SHOWING ALL GOLD CARDS")
-	for (var i = 0; i < ds_list_size(global.goldCards);i++ ) {
-		show_debug_message(global.goldCards[| i])
-	}
-	
-	/*for (var k = ds_map_find_first(global.goldCards); !is_undefined(k); k = ds_map_find_next(global.goldCards, k)) {
-		show_debug_message(global.goldCards[? k]);
-	}*/
-	
-	show_debug_message("SHOWING ALL DIAMOND CARDS")
-	for (var i = 0; i < ds_list_size(global.diamondCards);i++ ) {
-		show_debug_message(global.diamondCards[| i])
-	}
-	
-	/*for (var k = ds_map_find_first(global.diamondCards); !is_undefined(k); k = ds_map_find_next(global.diamondCards, k)) {
-		show_debug_message(global.diamondCards[? k]);
-	}*/
 	
 	var expCurve = []
 	global.max_level = 30
