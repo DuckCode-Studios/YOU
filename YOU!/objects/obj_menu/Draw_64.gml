@@ -10,8 +10,6 @@ var m_y = device_mouse_y_to_gui(0)
 draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 
-var sound_played = [0,0,0]
-
 for (var i = 0; i < op_max; i++) {
 
 	var str_h = string_height("I")

@@ -40,7 +40,15 @@ if (!instance_exists(obj_player)) {
 			scale[i] = lerp(scale[i], 1.4, 0.15)
 			draw_set_color(c_red)
 
+			if (!sound_played[i]) {
+	            audio_play_sound(snd_mouse_pass, 10, false, 0.2);
+	            sound_played[i] = 1;
+			}
+
 			if (mouse_check_button_pressed(mb_left)) {
+				audio_stop_sound(snd_mouse_pass)
+				audio_play_sound(snd_click, 10, false, 0.2)
+				
 				switch (options[i]) {
 					case options[0]:
 						reset_player_data()
@@ -54,6 +62,7 @@ if (!instance_exists(obj_player)) {
 		} else {
 			scale[i] = lerp(scale[i], 1, 0.15)
 			draw_set_color(c_white)
+			 sound_played[i] = 0
 		}
 
 		draw_text_transformed(display_get_gui_width()/2, gui_height / 2 + str_h * (i * gap) + offset, options[i], scale[i], scale[i], 0)
