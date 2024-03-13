@@ -163,7 +163,6 @@ for (var _xx = 0; _xx < cell_h;_xx++) {
 				enemy.vel = vel
 				enemy.life = life
 				enemy.damage = damage
-				show_debug_message(enemy)
 				ds_list_add(global.all_enemies, enemy)
 				
             }

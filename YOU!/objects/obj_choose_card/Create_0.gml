@@ -10,7 +10,7 @@ for (var i = 0; i < op_max; i++) {
 
 index = 0
 
-cards = ds_map_create()
-
+//cards = ds_map_create()
+cards = []
 sortedNumbers = ds_list_create()
 
